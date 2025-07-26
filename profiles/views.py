@@ -6,6 +6,7 @@ from .models import Profile
 from .serializers import ProfileSerializer
 from drf_api.permissions import IsOwnerOrReadOnly
 
+# Profile/views.py
 
 class ProfileList(APIView):
   def get(self, request):
