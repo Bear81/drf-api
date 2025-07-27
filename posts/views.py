@@ -18,8 +18,8 @@ class PostList(generics.ListCreateAPIView):
         likes_count=Count('likes', distinct=True)
     ).order_by('-created_at')
     filter_backends = [
-        filter.OrderingFilter,
-        filter.SearchFilter,
+        filters.OrderingFilter,
+        filters.SearchFilter,
         DjangoFilterBackend,
     ]
     filterset_fields = [
